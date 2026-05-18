@@ -100,6 +100,45 @@ const SEED = [
       {name:"Prince Selasie",calls:270,noAns:260,voicemail:0,wrong:5,notInterested:2,dnc:0,callback:0,expired:0,finishedSystem:2,moving:0,langBarrier:1,avgPreview:"01:32",avgConv:"00:06",enrolled:0},
     ]
   },
+  {
+    date:"2026-05-14",partial:false,agents:5,
+    dispositions:{noAns:1323,voicemail:270,wrong:132,notInterested:42,dnc:7,callback:3,expired:0,finishedSystem:18,moving:0,langBarrier:0},
+    timing:{previewAT:"01:06",convAT:"00:06"},
+    enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:332,noAns:191,voicemail:90,wrong:42,notInterested:6,dnc:1,callback:0,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:02",avgConv:"00:07",enrolled:0},
+      {name:"Abigal Duodom",calls:300,noAns:252,voicemail:20,wrong:13,notInterested:6,dnc:1,callback:0,expired:0,finishedSystem:8,moving:0,langBarrier:0,avgPreview:"01:11",avgConv:"00:03",enrolled:0},
+      {name:"Frances Obaze",calls:505,noAns:306,voicemail:132,wrong:47,notInterested:17,dnc:2,callback:1,expired:0,finishedSystem:0,moving:0,langBarrier:0,avgPreview:"00:46",avgConv:"00:06",enrolled:0},
+      {name:"Nick Baffour",calls:286,noAns:214,voicemail:28,wrong:27,notInterested:10,dnc:2,callback:0,expired:0,finishedSystem:5,moving:0,langBarrier:0,avgPreview:"01:23",avgConv:"00:05",enrolled:0},
+      {name:"Prince Selasie",calls:373,noAns:360,voicemail:0,wrong:3,notInterested:3,dnc:1,callback:2,expired:0,finishedSystem:3,moving:0,langBarrier:0,avgPreview:"01:08",avgConv:"00:07",enrolled:0},
+    ]
+  },
+  {
+    date:"2026-05-15",partial:false,agents:5,
+    dispositions:{noAns:1345,voicemail:302,wrong:115,notInterested:33,dnc:10,callback:1,expired:32,finishedSystem:10,moving:0,langBarrier:2},
+    timing:{previewAT:"01:02",convAT:"00:07"},
+    enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:340,noAns:178,voicemail:113,wrong:43,notInterested:4,dnc:0,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:0,avgPreview:"01:04",avgConv:"00:10",enrolled:0},
+      {name:"Abigal Duodom",calls:302,noAns:244,voicemail:22,wrong:27,notInterested:5,dnc:0,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:3,avgPreview:"01:17",avgConv:"00:03",enrolled:0},
+      {name:"Frances Obaze",calls:474,noAns:281,voicemail:123,wrong:19,notInterested:10,dnc:1,callback:0,expired:31,finishedSystem:1,moving:0,langBarrier:1,avgPreview:"00:52",avgConv:"00:07",enrolled:0},
+      {name:"Nick Baffour",calls:303,noAns:220,voicemail:44,wrong:25,notInterested:9,dnc:0,callback:1,expired:0,finishedSystem:0,moving:0,langBarrier:4,avgPreview:"01:21",avgConv:"00:05",enrolled:0},
+      {name:"Prince Selasie",calls:432,noAns:422,voicemail:0,wrong:1,notInterested:5,dnc:0,callback:0,expired:1,finishedSystem:1,moving:0,langBarrier:2,avgPreview:"00:58",avgConv:"00:08",enrolled:0},
+    ]
+  },
+  {
+    date:"2026-05-16",partial:false,agents:5,
+    dispositions:{noAns:1177,voicemail:315,wrong:169,notInterested:29,dnc:11,callback:1,expired:37,finishedSystem:16,moving:0,langBarrier:0},
+    timing:{previewAT:"01:04",convAT:"00:07"},
+    enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:301,noAns:118,voicemail:102,wrong:70,notInterested:11,dnc:0,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:0,avgPreview:"01:06",avgConv:"00:11",enrolled:0},
+      {name:"Abigal Duodom",calls:351,noAns:251,voicemail:36,wrong:46,notInterested:9,dnc:3,callback:0,expired:0,finishedSystem:6,moving:0,langBarrier:0,avgPreview:"00:59",avgConv:"00:06",enrolled:0},
+      {name:"Frances Obaze",calls:431,noAns:244,voicemail:126,wrong:15,notInterested:2,dnc:6,callback:0,expired:37,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"00:55",avgConv:"00:07",enrolled:0},
+      {name:"Nick Baffour",calls:309,noAns:210,voicemail:50,wrong:34,notInterested:6,dnc:2,callback:0,expired:0,finishedSystem:7,moving:0,langBarrier:0,avgPreview:"01:18",avgConv:"00:04",enrolled:0},
+      {name:"Prince Selasie",calls:363,noAns:354,voicemail:1,wrong:4,notInterested:1,dnc:0,callback:1,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:03",avgConv:"00:08",enrolled:0},
+    ]
+  },
 ];
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
