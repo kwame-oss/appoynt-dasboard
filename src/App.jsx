@@ -140,7 +140,7 @@ const SEED = [
     ]
   },
   {
-    date:"2026-05-18",partial:true,agents:5,
+    date:"2026-05-18",partial:false,agents:5,
     dispositions:{noAns:1202,voicemail:293,wrong:111,notInterested:38,dnc:11,callback:2,expired:25,finishedSystem:13,moving:0,langBarrier:1},
     timing:{previewAT:"01:04",convAT:"00:08"},
         enrolled:0,
@@ -150,6 +150,19 @@ const SEED = [
       {name:"Frances Obaze",calls:311,noAns:176,voicemail:95,wrong:3,notInterested:7,dnc:3,callback:1,expired:24,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:06",avgConv:"00:11",enrolled:0},
       {name:"Nick Baffour",calls:307,noAns:214,voicemail:44,wrong:31,notInterested:10,dnc:4,callback:0,expired:0,finishedSystem:3,moving:0,langBarrier:1,avgPreview:"01:13",avgConv:"00:05",enrolled:0},
       {name:"Prince Selasie",calls:377,noAns:365,voicemail:0,wrong:1,notInterested:5,dnc:0,callback:0,expired:1,finishedSystem:5,moving:0,langBarrier:0,avgPreview:"01:00",avgConv:"00:07",enrolled:0},
+    ]
+  },
+  {
+    date:"2026-05-19",partial:false,agents:5,
+    dispositions:{noAns:1392,voicemail:240,wrong:95,notInterested:26,dnc:5,callback:1,expired:32,finishedSystem:14,moving:0,langBarrier:1},
+    timing:{previewAT:"01:02",convAT:"00:06"},
+        enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:388,noAns:224,voicemail:121,wrong:35,notInterested:8,dnc:0,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:0,avgPreview:"00:55",avgConv:"00:07",enrolled:0},
+      {name:"Abigal Duodom",calls:312,noAns:249,voicemail:23,wrong:28,notInterested:5,dnc:3,callback:0,expired:0,finishedSystem:4,moving:0,langBarrier:0,avgPreview:"01:06",avgConv:"00:03",enrolled:0},
+      {name:"Frances Obaze",calls:382,noAns:269,voicemail:67,wrong:5,notInterested:7,dnc:1,callback:0,expired:32,finishedSystem:0,moving:0,langBarrier:1,avgPreview:"00:51",avgConv:"00:09",enrolled:0},
+      {name:"Nick Baffour",calls:302,noAns:237,voicemail:29,wrong:25,notInterested:3,dnc:1,callback:1,expired:0,finishedSystem:5,moving:0,langBarrier:0,avgPreview:"01:20",avgConv:"00:04",enrolled:0},
+      {name:"Prince Selasie",calls:423,noAns:413,voicemail:0,wrong:2,notInterested:3,dnc:0,callback:0,expired:0,finishedSystem:5,moving:0,langBarrier:0,avgPreview:"00:58",avgConv:"00:06",enrolled:0},
     ]
   },
 ];
