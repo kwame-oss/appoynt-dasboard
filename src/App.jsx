@@ -166,7 +166,7 @@ const SEED = [
     ]
   },
   {
-    date:"2026-05-20",partial:true,agents:5,
+    date:"2026-05-20",partial:false,agents:5,
     dispositions:{noAns:1266,voicemail:169,wrong:95,notInterested:15,dnc:9,callback:1,expired:17,finishedSystem:22,moving:0,langBarrier:0},
     timing:{previewAT:"01:03",convAT:"00:05"},
         enrolled:0,
@@ -178,6 +178,45 @@ const SEED = [
       {name:"Prince Selasie",calls:337,noAns:329,voicemail:0,wrong:1,notInterested:3,dnc:1,callback:0,expired:0,finishedSystem:3,moving:0,langBarrier:0,avgPreview:"01:12",avgConv:"00:06",enrolled:0},
     ]
   },
+  {
+    date:"2026-05-21",partial:false,agents:5,
+    dispositions:{noAns:1116,voicemail:408,wrong:91,notInterested:66,dnc:8,callback:3,expired:32,finishedSystem:14,moving:0,langBarrier:3},
+    timing:{previewAT:"01:03",convAT:"00:10"},
+        enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:321,noAns:138,voicemail:131,wrong:30,notInterested:21,dnc:1,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:0,avgPreview:"01:08",avgConv:"00:13",enrolled:0},
+      {name:"Abigal Duodom",calls:370,noAns:223,voicemail:92,wrong:29,notInterested:20,dnc:1,callback:2,expired:0,finishedSystem:2,moving:0,langBarrier:1,avgPreview:"00:59",avgConv:"00:09",enrolled:0},
+      {name:"Frances Obaze",calls:400,noAns:230,voicemail:115,wrong:5,notInterested:8,dnc:6,callback:0,expired:31,finishedSystem:4,moving:0,langBarrier:1,avgPreview:"00:44",avgConv:"00:09",enrolled:0},
+      {name:"Nick Baffour",calls:302,noAns:190,voicemail:70,wrong:24,notInterested:10,dnc:0,callback:1,expired:1,finishedSystem:5,moving:0,langBarrier:1,avgPreview:"01:13",avgConv:"00:05",enrolled:0},
+      {name:"Prince Selasie",calls:348,noAns:335,voicemail:0,wrong:3,notInterested:7,dnc:0,callback:0,expired:0,finishedSystem:3,moving:0,langBarrier:0,avgPreview:"01:11",avgConv:"00:14",enrolled:0},
+    ]
+  },
+  {
+    date:"2026-05-22",partial:false,agents:5,
+    dispositions:{noAns:762,voicemail:594,wrong:116,notInterested:79,dnc:16,callback:6,expired:32,finishedSystem:16,moving:1,langBarrier:4},
+    timing:{previewAT:"01:08",convAT:"00:15"},
+        enrolled:1,
+    agentData:[
+      {name:"Anna Amponsah",calls:356,noAns:56,voicemail:224,wrong:49,notInterested:20,dnc:3,callback:0,expired:0,finishedSystem:2,moving:1,langBarrier:1,avgPreview:"01:05",avgConv:"00:20",enrolled:0},
+      {name:"Abigal Duodom",calls:301,noAns:143,voicemail:96,wrong:32,notInterested:25,dnc:1,callback:0,expired:0,finishedSystem:2,moving:0,langBarrier:1,avgPreview:"01:10",avgConv:"00:13",enrolled:1},
+      {name:"Frances Obaze",calls:358,noAns:136,voicemail:163,wrong:3,notInterested:13,dnc:7,callback:2,expired:32,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"00:51",avgConv:"00:17",enrolled:0},
+      {name:"Nick Baffour",calls:300,noAns:129,voicemail:111,wrong:30,notInterested:13,dnc:4,callback:2,expired:0,finishedSystem:9,moving:0,langBarrier:2,avgPreview:"01:12",avgConv:"00:08",enrolled:0},
+      {name:"Prince Selasie",calls:314,noAns:298,voicemail:0,wrong:2,notInterested:8,dnc:1,callback:2,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:20",avgConv:"00:16",enrolled:1},
+    ]
+  },
+  {
+    date:"2026-05-23",partial:false,agents:5,
+    dispositions:{noAns:801,voicemail:469,wrong:99,notInterested:68,dnc:10,callback:4,expired:29,finishedSystem:5,moving:0,langBarrier:7},
+    timing:{previewAT:"00:53",convAT:"00:10"},
+        enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:252,noAns:61,voicemail:142,wrong:33,notInterested:13,dnc:0,callback:0,expired:0,finishedSystem:0,moving:0,langBarrier:3,avgPreview:"00:48",avgConv:"00:14",enrolled:0},
+      {name:"Abigal Duodom",calls:331,noAns:182,voicemail:86,wrong:36,notInterested:21,dnc:1,callback:2,expired:0,finishedSystem:2,moving:0,langBarrier:1,avgPreview:"00:55",avgConv:"00:06",enrolled:0},
+      {name:"Frances Obaze",calls:263,noAns:59,voicemail:146,wrong:0,notInterested:18,dnc:8,callback:1,expired:29,finishedSystem:0,moving:0,langBarrier:2,avgPreview:"00:29",avgConv:"00:08",enrolled:0},
+      {name:"Nick Baffour",calls:300,noAns:159,voicemail:95,wrong:28,notInterested:14,dnc:1,callback:1,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:17",avgConv:"00:07",enrolled:0},
+      {name:"Prince Selasie",calls:346,noAns:340,voicemail:0,wrong:2,notInterested:2,dnc:0,callback:0,expired:0,finishedSystem:1,moving:0,langBarrier:1,avgPreview:"01:09",avgConv:"00:16",enrolled:0},
+    ]
+  },
 ];
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
@@ -187,7 +226,9 @@ const cr = d => { const t=tc(d); return t>0?((lc(d)/t)*100).toFixed(1):"0.0"; };
 const aLive = a => (a.notInterested||0)+(a.callback||0)+(a.moving||0)+(a.langBarrier||0);
 const aCr = a => a.calls>0?((aLive(a)/a.calls)*100).toFixed(1):"0.0";
 const pch = (a,b) => { if(a===0) return b===0?"—":"+∞"; const v=((b-a)/a)*100; return (v>=0?"+":"")+v.toFixed(1)+"%"; };
-const fd = s => { const d=new Date(s+"T12:00:00"); return d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short"}); };
+const DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const fd = s => { const d=new Date(s+"T12:00:00"); return DAYS[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()]; };
 const fn = n => n!=null?n.toLocaleString():"—";
 const wk = s => { const d=new Date(s+"T12:00:00"); const day=d.getDay(); const m=new Date(d); m.setDate(d.getDate()-((day+6)%7)); return m.toISOString().slice(0,10); };
 const mo = s => s.slice(0,7);
