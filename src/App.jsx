@@ -217,6 +217,19 @@ const SEED = [
       {name:"Prince Selasie",calls:346,noAns:340,voicemail:0,wrong:2,notInterested:2,dnc:0,callback:0,expired:0,finishedSystem:1,moving:0,langBarrier:1,avgPreview:"01:09",avgConv:"00:16",enrolled:0},
     ]
   },
+  {
+    date:"2026-05-25",partial:false,agents:5,
+    dispositions:{noAns:803,voicemail:535,wrong:126,notInterested:63,dnc:14,callback:3,expired:24,finishedSystem:7,moving:0,langBarrier:2},
+    timing:{previewAT:"00:55",convAT:"00:12"},
+        enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:303,noAns:57,voicemail:172,wrong:55,notInterested:14,dnc:2,callback:0,expired:0,finishedSystem:1,moving:0,langBarrier:2,avgPreview:"00:47",avgConv:"00:12",enrolled:0},
+      {name:"Abigal Duodom",calls:360,noAns:184,voicemail:119,wrong:28,notInterested:24,dnc:2,callback:1,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"00:44",avgConv:"00:10",enrolled:0},
+      {name:"Frances Obaze",calls:309,noAns:114,voicemail:149,wrong:2,notInterested:8,dnc:9,callback:1,expired:24,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"00:48",avgConv:"00:13",enrolled:0},
+      {name:"Nick Baffour",calls:302,noAns:150,voicemail:95,wrong:41,notInterested:13,dnc:1,callback:0,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:10",avgConv:"00:07",enrolled:0},
+      {name:"Prince Selasie",calls:304,noAns:298,voicemail:0,wrong:0,notInterested:4,dnc:0,callback:1,expired:0,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"01:17",avgConv:"00:16",enrolled:0},
+    ]
+  },
 ];
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
@@ -226,9 +239,9 @@ const cr = d => { const t=tc(d); return t>0?((lc(d)/t)*100).toFixed(1):"0.0"; };
 const aLive = a => (a.notInterested||0)+(a.callback||0)+(a.moving||0)+(a.langBarrier||0);
 const aCr = a => a.calls>0?((aLive(a)/a.calls)*100).toFixed(1):"0.0";
 const pch = (a,b) => { if(a===0) return b===0?"—":"+∞"; const v=((b-a)/a)*100; return (v>=0?"+":"")+v.toFixed(1)+"%"; };
-const DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const fd = s => { const d=new Date(s+"T12:00:00"); return DAYS[d.getDay()]+" "+d.getDate()+" "+MONTHS[d.getMonth()]; };
+const DAYS=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const fd = s => { const p=s.split("-"); return parseInt(p[2])+" "+MONTHS[parseInt(p[1])-1]; };
 const fn = n => n!=null?n.toLocaleString():"—";
 const wk = s => { const d=new Date(s+"T12:00:00"); const day=d.getDay(); const m=new Date(d); m.setDate(d.getDate()-((day+6)%7)); return m.toISOString().slice(0,10); };
 const mo = s => s.slice(0,7);
