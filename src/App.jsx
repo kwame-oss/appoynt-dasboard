@@ -243,6 +243,19 @@ const SEED = [
       {name:"Prince Selasie",calls:308,noAns:296,voicemail:0,wrong:3,notInterested:4,dnc:0,callback:1,expired:1,finishedSystem:3,moving:0,langBarrier:0,avgPreview:"01:14",avgConv:"00:15",enrolled:0},
     ]
   },
+  {
+    date:"2026-05-27",partial:false,agents:5,
+    dispositions:{noAns:787,voicemail:573,wrong:147,notInterested:122,dnc:11,callback:7,expired:51,finishedSystem:11,moving:0,langBarrier:16},
+    timing:{previewAT:"01:02",convAT:"00:12"},
+        enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:382,noAns:68,voicemail:216,wrong:65,notInterested:28,dnc:1,callback:1,expired:0,finishedSystem:0,moving:0,langBarrier:3,avgPreview:"00:59",avgConv:"00:11",enrolled:0},
+      {name:"Abigal Duodom",calls:355,noAns:180,voicemail:95,wrong:45,notInterested:27,dnc:3,callback:0,expired:0,finishedSystem:4,moving:0,langBarrier:1,avgPreview:"00:59",avgConv:"00:09",enrolled:0},
+      {name:"Frances Obaze",calls:358,noAns:121,voicemail:144,wrong:1,notInterested:29,dnc:5,callback:2,expired:51,finishedSystem:1,moving:0,langBarrier:4,avgPreview:"00:38",avgConv:"00:13",enrolled:0},
+      {name:"Nick Baffour",calls:310,noAns:123,voicemail:118,wrong:35,notInterested:27,dnc:2,callback:0,expired:0,finishedSystem:3,moving:0,langBarrier:2,avgPreview:"01:15",avgConv:"00:08",enrolled:0},
+      {name:"Prince Selasie",calls:320,noAns:295,voicemail:0,wrong:1,notInterested:11,dnc:0,callback:4,expired:0,finishedSystem:3,moving:0,langBarrier:6,avgPreview:"01:17",avgConv:"00:18",enrolled:0},
+    ]
+  },
 ];
 
 // ─── Utils ──────────────────────────────────────────────────────────────────
