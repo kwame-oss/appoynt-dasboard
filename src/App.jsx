@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import { AreaChart, Area, BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 
 // ─── Logo ────────────────────────────────────────────────────────────────────
@@ -25,6 +25,19 @@ const SEED = [
   { date:"2026-05-25", partial:false, agents:5, dispositions:{noAns:803,voicemail:535,wrong:126,notInterested:63,dnc:14,callback:3,expired:24,finishedSystem:7,moving:0,langBarrier:2}, timing:{previewAT:"00:55",convAT:"00:12"}, enrolled:0, agentData:[{name:"Anna Amponsah",calls:303,noAns:57,voicemail:172,wrong:55,notInterested:14,dnc:2,callback:0,expired:0,finishedSystem:1,moving:0,langBarrier:2,avgPreview:"00:47",avgConv:"00:12",enrolled:0},{name:"Abigal Duodom",calls:360,noAns:184,voicemail:119,wrong:28,notInterested:24,dnc:2,callback:1,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"00:44",avgConv:"00:10",enrolled:0},{name:"Frances Obaze",calls:309,noAns:114,voicemail:149,wrong:2,notInterested:8,dnc:9,callback:1,expired:24,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"00:48",avgConv:"00:13",enrolled:0},{name:"Nick Baffour",calls:302,noAns:150,voicemail:95,wrong:41,notInterested:13,dnc:1,callback:0,expired:0,finishedSystem:2,moving:0,langBarrier:0,avgPreview:"01:10",avgConv:"00:07",enrolled:0},{name:"Prince Selasie",calls:304,noAns:298,voicemail:0,wrong:0,notInterested:4,dnc:0,callback:1,expired:0,finishedSystem:1,moving:0,langBarrier:0,avgPreview:"01:17",avgConv:"00:16",enrolled:0}] },
   { date:"2026-05-26", partial:false, agents:5, dispositions:{noAns:762,voicemail:501,wrong:124,notInterested:84,dnc:13,callback:3,expired:21,finishedSystem:11,moving:1,langBarrier:7}, timing:{previewAT:"01:02",convAT:"00:11"}, enrolled:0, agentData:[{name:"Anna Amponsah",calls:361,noAns:71,voicemail:207,wrong:58,notInterested:19,dnc:2,callback:0,expired:0,finishedSystem:0,moving:1,langBarrier:3,avgPreview:"01:00",avgConv:"00:12",enrolled:0},{name:"Abigal Duodom",calls:350,noAns:172,voicemail:101,wrong:40,notInterested:30,dnc:1,callback:0,expired:0,finishedSystem:5,moving:0,langBarrier:1,avgPreview:"00:48",avgConv:"00:09",enrolled:0},{name:"Frances Obaze",calls:201,noAns:74,voicemail:86,wrong:1,notInterested:11,dnc:6,callback:1,expired:20,finishedSystem:1,moving:0,langBarrier:1,avgPreview:"00:52",avgConv:"00:13",enrolled:0},{name:"Nick Baffour",calls:307,noAns:149,voicemail:107,wrong:22,notInterested:20,dnc:4,callback:1,expired:0,finishedSystem:2,moving:0,langBarrier:2,avgPreview:"01:16",avgConv:"00:08",enrolled:0},{name:"Prince Selasie",calls:308,noAns:296,voicemail:0,wrong:3,notInterested:4,dnc:0,callback:1,expired:1,finishedSystem:3,moving:0,langBarrier:0,avgPreview:"01:14",avgConv:"00:15",enrolled:0}] },
   { date:"2026-05-27", partial:false, agents:5, dispositions:{noAns:787,voicemail:573,wrong:147,notInterested:122,dnc:11,callback:7,expired:51,finishedSystem:11,moving:0,langBarrier:16}, timing:{previewAT:"01:02",convAT:"00:12"}, enrolled:0, agentData:[{name:"Anna Amponsah",calls:382,noAns:68,voicemail:216,wrong:65,notInterested:28,dnc:1,callback:1,expired:0,finishedSystem:0,moving:0,langBarrier:3,avgPreview:"00:59",avgConv:"00:11",enrolled:0},{name:"Abigal Duodom",calls:355,noAns:180,voicemail:95,wrong:45,notInterested:27,dnc:3,callback:0,expired:0,finishedSystem:4,moving:0,langBarrier:1,avgPreview:"00:59",avgConv:"00:09",enrolled:0},{name:"Frances Obaze",calls:358,noAns:121,voicemail:144,wrong:1,notInterested:29,dnc:5,callback:2,expired:51,finishedSystem:1,moving:0,langBarrier:4,avgPreview:"00:38",avgConv:"00:13",enrolled:0},{name:"Nick Baffour",calls:310,noAns:123,voicemail:118,wrong:35,notInterested:27,dnc:2,callback:0,expired:0,finishedSystem:3,moving:0,langBarrier:2,avgPreview:"01:15",avgConv:"00:08",enrolled:0},{name:"Prince Selasie",calls:320,noAns:295,voicemail:0,wrong:1,notInterested:11,dnc:0,callback:4,expired:0,finishedSystem:3,moving:0,langBarrier:6,avgPreview:"01:17",avgConv:"00:18",enrolled:0}] },
+  {
+    date:"2026-05-28",partial:false,agents:5,
+    dispositions:{noAns:761,voicemail:548,wrong:97,notInterested:96,dnc:13,callback:8,expired:25,finishedSystem:16,moving:2,langBarrier:9},
+    timing:{previewAT:"01:04",convAT:"00:12"},
+    enrolled:0,
+    agentData:[
+      {name:"Anna Amponsah",calls:347,noAns:93,voicemail:191,wrong:35,notInterested:19,dnc:1,callback:2,expired:0,finishedSystem:0,moving:1,langBarrier:5,avgPreview:"01:09",avgConv:"00:11",enrolled:0},
+      {name:"Abigal Duodom",calls:305,noAns:137,voicemail:98,wrong:30,notInterested:34,dnc:3,callback:1,expired:0,finishedSystem:1,moving:1,langBarrier:0,avgPreview:"01:06",avgConv:"00:09",enrolled:0},
+      {name:"Frances Obaze",calls:353,noAns:124,voicemail:159,wrong:2,notInterested:21,dnc:8,callback:5,expired:24,finishedSystem:7,moving:0,langBarrier:3,avgPreview:"00:59",avgConv:"00:16",enrolled:0},
+      {name:"Nick Baffour",calls:300,noAns:150,voicemail:100,wrong:30,notInterested:14,dnc:1,callback:0,expired:0,finishedSystem:4,moving:0,langBarrier:0,avgPreview:"00:59",avgConv:"00:08",enrolled:0},
+      {name:"Prince Selasie",calls:271,noAns:257,voicemail:0,wrong:0,notInterested:8,dnc:0,callback:0,expired:1,finishedSystem:4,moving:0,langBarrier:1,avgPreview:"01:30",avgConv:"00:18",enrolled:0},
+    ]
+  },
 ];
 
 // ─── Utils ────────────────────────────────────────────────────────────────────
@@ -138,8 +151,8 @@ function WeeklyTable({ filtered }) {
         <thead><tr><TH ch="Period" left/><TH ch="Calls"/><TH ch="No ans"/><TH ch="VM"/><TH ch="Wrong#"/><TH ch="Not int."/><TH ch="DNC"/><TH ch="Live"/><TH ch="Connect%"/><TH ch="Enrolled"/></tr></thead>
         <tbody>
           {weeks.map(({wk,days,agg})=>(
-            <>
-              <tr key={wk} onClick={()=>setExpanded(e=>({...e,[wk]:!e[wk]}))} style={{cursor:"pointer",background:P.blueLight,borderBottom:`1px solid ${P.grayLight}`}}>
+            <React.Fragment key={wk}>
+              <tr onClick={()=>setExpanded(e=>({...e,[wk]:!e[wk]}))} style={{cursor:"pointer",background:P.blueLight,borderBottom:`1px solid ${P.grayLight}`}}>
                 <td style={{padding:"10px 8px",fontWeight:600,color:P.blue,fontSize:12,whiteSpace:"nowrap"}}>
                   <span style={{marginRight:6,fontSize:10}}>{expanded[wk]?"▼":"▶"}</span>
                   Week of {fmtDate(wk)}
@@ -171,7 +184,7 @@ function WeeklyTable({ filtered }) {
                   </tr>
                 );
               })}
-            </>
+            </React.Fragment>
           ))}
         </tbody>
       </table>
