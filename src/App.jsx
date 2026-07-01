@@ -191,7 +191,7 @@ export default function App(){
 
   // Auto-aggregate: >21 days = weekly, <=21 days = daily
   const chartD=useMemo(()=>{
-    if(cData.length<=21){
+    if(cData.length<=14){
       return cData.map(d=>({name:fd(d.date),calls:tc(d),live:lc(d),cr:cr(d),pt:pPT(d.timing?.previewAT),partial:d.partial}));
     }
     // Weekly aggregation
